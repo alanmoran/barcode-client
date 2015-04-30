@@ -1,7 +1,7 @@
 {
-  "host": "<host>",
-  "appid": "<appid>",
-  "projectid": "<projectid>",
-  "appkey": "<appkey>",
-  "connectiontag": "<connectiontag>"
+  "appid": "2oczvepp4ki3frp3wh5uqzfm",
+  "appkey": "9e49be965fd6a813764d09900bf9124ecb0cb6b5",
+  "connectiontag": "0.0.1",
+  "host": "https://cholmes.demos.feedhenry.com",
+  "projectid": "2oczvej3yebcas6ppe5xlmg6"
 }
