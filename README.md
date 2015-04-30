@@ -1,33 +1,32 @@
-FeedHenry Blank Hybrid App
-==========================
-
-A basic 'hello world' Hybrid App.
-
-# Grunt
-
-This template uses [Grunt](http://gruntjs.com/), the Javascript Task Runner. To use Grunt with this Template App, do the following:
-
-* Install grunt: ```npm install -g grunt-cli```
-* In your App directory, run: ```npm install```. This installs Grunt plugins, etc for use with this App.
-* Run ```grunt serve``` to preview this App locally
+#Barcode Scanner project
+(Cloud application is located [here](https://github.com/cianclarke/barcode-client))
+##Step 1: Base Cloud App
+* Has one route, /hello
+* Gets mounted in `application.js`
+* Handles the route in `lib/hello.js`
+* We're going to modify this to accept barcodes.
 
 
-### FeedHenry local development
+###Step 2: UPS Barcode Soap Integration
+We're going to take an online SOAP service which returns a mix of SOAP and CSV - neither of which are approprirate for a mobile API, and convert this response to mobile-friendly JSON.  
 
-You can also use Grunt to point your App at a local developement server. To do this, use the ```grunt serve:local``` command. Some notes on using the serve:local task:
+* Include `soap` and `csv` dependencies
+* Introduce our [UPC Search](http://www.searchupc.com/supc/service/UPCSearch.asmx) soap service
+* Modify `/lib/hello.js` to include SOAP service
 
-* by default, the local server development url is: http://localhost:8001
-* you can change this directly in your local Gruntfile.js, in the app config:
+### Step 3: Document Barcode Service
+* Document using API Blueprint Format
+* Illustrates discovery of service
 
-```
-  app: {
-    // configurable paths
-    app: 'www',
-    url: '',
-    default_local_server_url: 'http://localhost:8001'
-  },
-```
+### Step 4: Create our client application. 
+* Uses the now changed `hello` route
+* Has 1 input, 1 button which we're going to use
 
-* you can also pass a 'url' optional flag to server:local, e.g. ```grunt serve:local --url=http://localhost:9000```
+### Step 5: Update our client application to do barcode lookup
+* Update the labels in `index.html`
+* Update the params we send to the `/hello` cloud route
+* Update what we display on the page to be the cover image & title
 
-* We can also write your own tasks by extending the Gruntfile.js, e.g. add a 'serve:live' target that hits your server in your FeedHenry live enivronment.
+### Step 6: Add Barcode Scanner
+* Add the barcode scanner to our app
+* Update the button to trigger the barcode scanner
