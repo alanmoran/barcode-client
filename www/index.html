@@ -24,25 +24,46 @@
           <br>
 
           <div class="input-div">
-              <input id="hello_to" type="text" class="input-text" placeholder="Enter Your USP Code"/>
+              <input id="barcode_number" type="text" class="input-text" placeholder="Enter Your USP Code"/>
           </div>
 
           <br>
 
-          <button id="say_hello" type="button" class="say-hello-button">Scan Barcode</button>
-          <div id="cloudResponse" class="cloudResponse"></div>
-      </div>
-  </div>
-
-      <footer class="header-footer-bg">
-          <div>
-              <small class="right">
-                  <!-- v.&nbsp;{{ version }} -->
-              </small>
+          <button id="scan_barcode" type="button" class="say-hello-button">Scan Barcode</button>
+          <button id="search" type="button" class="say-hello-button">Search</button>
+          
+          <div class="recentItems">
+            <div class="center header-footer-bg">
+              <h3>Recent Scans</h3>
+            </div>
+            <ul class="list" id="recent">
+              Loading...
+            </ul>
           </div>
-      </footer>
-
+          
+          <div class="orders">
+            <div class="center header-footer-bg">
+              <h3>Your Orders</h3>
+            </div>
+            <ul class="list" id="orders">
+              Loading...
+            </ul>
+          </div>
+          
+          <div class="orders">
+            <div class="center header-footer-bg">
+              <h3>Selected Item</h3>
+            </div>
+            <div id="cloudResponse" class="cloudResponse">
+              Scan a barcode or select a recent scan
+            </div>
+            <button id="order_button" type="button" class="say-hello-button">Order this</button>
+          </div>
+      </div>
+      
+  </div>
     <script src="feedhenry.js"></script>
-    <script src="hello.js"></script>
+    <script src="barcode.js"></script>
+    <script src="events.js"></script>
   </body>
 </html>
