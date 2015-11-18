@@ -115,29 +115,3 @@ footer > div > small {
 
     padding: 5px 0px 5px 0px;
 }
-
-ul.list {
-  list-style: none;
-  font-size: 16px;
-}
-
-ul.list li {
-  padding: 8px 8px;  
-}
-
-ul#recent li {
-  color: blue;
-}
-
-ul#recent li:after {
-  content:"  \00bb"; /* &raquo; */
-}
-
-#order_button {
-  display : none;
-}
-
-#orders a{
-  float: right;
-  color: red;
-}
