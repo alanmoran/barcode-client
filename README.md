@@ -1,5 +1,5 @@
 #Barcode Scanner project
-(Cloud application is located [here](https://github.com/cianclarke/barcode-client))
+(Cloud application is located [here](https://github.com/alanmoran/barcode-cloud))
 ##Step 1: Base Cloud App
 * Has one route, /hello
 * Gets mounted in `application.js`
@@ -8,7 +8,7 @@
 
 
 ###Step 2: UPS Barcode Soap Integration
-We're going to take an online SOAP service which returns a mix of SOAP and CSV - neither of which are approprirate for a mobile API, and convert this response to mobile-friendly JSON.  
+We're going to take an online SOAP service which returns a mix of SOAP and CSV - neither of which are approprirate for a mobile API, and convert this response to mobile-friendly JSON.
 
 * Include `soap` and `csv` dependencies
 * Introduce our [UPC Search](http://www.searchupc.com/supc/service/UPCSearch.asmx) soap service
@@ -18,7 +18,7 @@ We're going to take an online SOAP service which returns a mix of SOAP and CSV -
 * Document using API Blueprint Format
 * Illustrates discovery of service
 
-### Step 4: Create our client application. 
+### Step 4: Create our client application.
 * Uses the now changed `hello` route
 * Has 1 input, 1 button which we're going to use
 
